@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[2]:
 
 
 import numpy as np
@@ -101,6 +101,12 @@ class absenteeism_model():
         def predicted_outputs(self):
             if (self.data is not None):
                 self.preprocessed_data["Probability"] = self.reg.predict_proba(self.data)[:,1]
-                self.preprocessed_data["Prediction"] = self.reg.predict(self_data)
+                self.preprocessed_data["Prediction"] = self.reg.predict(self.data)
                 return self.preprocessed_data
+
+
+# In[ ]:
+
+
+
 
